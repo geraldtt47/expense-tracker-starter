@@ -4,6 +4,7 @@ import Summary from './Summary.jsx'
 import TransactionForm from './TransactionForm.jsx'
 import TransactionList from './TransactionList.jsx'
 import SpendingChart from './SpendingChart.jsx'
+import Button from './components/button'
 
 function App() {
   const [transactions, setTransactions] = useState([
@@ -35,6 +36,7 @@ function App() {
       <SpendingChart transactions={transactions} />
       <TransactionForm onAdd={handleAdd} />
       <TransactionList transactions={transactions} onDelete={handleDelete} />
+      <Button variant="purple">Contact Us</Button>
     </div>
   );
 }

@@ -1,0 +1,77 @@
+.glossy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--btn-color) 70%, white) 0%,
+    var(--btn-color) 50%,
+    color-mix(in srgb, var(--btn-color) 80%, black) 100%
+  );
+  box-shadow:
+    0 6px 20px color-mix(in srgb, var(--btn-color) 60%, transparent),
+    0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.glossy-btn::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50px;
+  border: 1.5px solid color-mix(in srgb, var(--btn-color) 40%, white);
+  pointer-events: none;
+}
+
+.glossy-btn::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 10%;
+  width: 80%;
+  height: 38%;
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.glossy-btn__inner {
+  padding: 14px 32px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.glossy-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 28px color-mix(in srgb, var(--btn-color) 70%, transparent),
+    0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.glossy-btn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    0 3px 10px color-mix(in srgb, var(--btn-color) 50%, transparent),
+    0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.glossy-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
