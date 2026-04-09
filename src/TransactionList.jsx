@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import categories from './categories.js'
+import categoryColors from './categoryColors.js'
 
 function TransactionList({ transactions, onDelete }) {
   const [filterType, setFilterType] = useState("all");
@@ -45,7 +46,14 @@ function TransactionList({ transactions, onDelete }) {
             <tr key={t.id}>
               <td>{t.date}</td>
               <td>{t.description}</td>
-              <td>{t.category}</td>
+              <td>
+                <span
+                  className="category-badge"
+                  style={{
+                    '--badge-color': categoryColors[t.category] ?? '#94a3b8',
+                  }}
+                >{t.category}</span>
+              </td>
               <td className={t.type === "income" ? "income-amount" : "expense-amount"}>
                 {t.type === "income" ? "+" : "-"}${t.amount}
               </td>
