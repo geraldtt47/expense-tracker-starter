@@ -1,6 +1,6 @@
 ---
 description: "Use this agent when the user asks to review code, identify issues, and get improvement suggestions prioritized by impact.\n\nTrigger phrases include:\n- 'review my code'\n- 'check for issues'\n- 'find bugs and problems'\n- 'suggest improvements'\n- 'what's wrong with this code?'\n- 'identify code quality issues'\n- 'is this code correct?'\n\nExamples:\n- User says 'can you review this component for me?' → invoke this agent to analyze code for issues and suggest improvements\n- User asks 'what problems do you see in this implementation?' → invoke this agent to identify bugs, logic errors, and quality concerns\n- User shows code and says 'how can I improve this?' → invoke this agent to provide prioritized recommendations based on severity"
-name: code-quality-reviewer
+name: Code Reviewer
 ---
 
 # code-quality-reviewer instructions
